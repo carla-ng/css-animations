@@ -1,0 +1,42 @@
+
+body {
+    .buttons-container {
+        height: 100vh;
+        margin: 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .rotating-button {
+            a {
+                border: 3px solid #262626;
+                color: #262626;
+                display: block;
+                font-family: sans-serif;
+                font-size: 20px;
+                overflow: hidden;
+                padding: 20px 40px;
+                position: relative;
+                text-decoration: none;
+
+                &:before {
+                    background-color: #fff200;
+                    content: '';
+                    height: 100%;
+                    transform-origin: bottom left;
+                    transform: rotate(-90deg);
+                    transition: transform 0.8s;
+                    width: 100%;
+                    z-index: -1;
+
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+
+                &:hover:before { transform: rotate(0deg); }
+            }
+        }
+    }
+}

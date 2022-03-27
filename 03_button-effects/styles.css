@@ -1,0 +1,49 @@
+body .buttons-container {
+  height: 100vh;
+  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .buttons-container .rotating-button a {
+  border: 3px solid #262626;
+  color: #262626;
+  display: block;
+  font-family: sans-serif;
+  font-size: 20px;
+  overflow: hidden;
+  padding: 20px 40px;
+  position: relative;
+  text-decoration: none;
+}
+
+body .buttons-container .rotating-button a:before {
+  background-color: #fff200;
+  content: '';
+  height: 100%;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+body .buttons-container .rotating-button a:hover:before {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
