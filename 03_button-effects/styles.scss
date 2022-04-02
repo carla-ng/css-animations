@@ -8,10 +8,11 @@ body {
         align-items: center;
         justify-content: center;
 
-        .rotating-button {
+        // Common styles
+        .button {
+            margin: 6px;
+
             a {
-                border: 3px solid #262626;
-                color: #262626;
                 display: block;
                 font-family: sans-serif;
                 font-size: 20px;
@@ -19,6 +20,13 @@ body {
                 padding: 20px 40px;
                 position: relative;
                 text-decoration: none;
+            }
+        }
+
+        .rotating-button {
+            a {
+                border: 3px solid #262626;
+                color: #262626;  
 
                 &:before {
                     background-color: #fff200;
@@ -38,5 +46,38 @@ body {
                 &:hover:before { transform: rotate(0deg); }
             }
         }
+
+
+        .swipe-button {
+            a {
+                border: 3px solid #351435;
+                color: #351435;
+                transition: all 1s;
+    
+                &:before {
+                    background-color: #351435;
+                    content: '';
+                    height: 100%;
+                    transform: translateX(-100%);
+                    transition: all 1s;
+                    width: 100%;
+                    z-index: -1;
+    
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+    
+                &:hover {
+                    color: #fff;
+
+                    &:before {
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+
+
     }
 }

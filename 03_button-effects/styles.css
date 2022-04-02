@@ -12,9 +12,11 @@ body .buttons-container {
           justify-content: center;
 }
 
-body .buttons-container .rotating-button a {
-  border: 3px solid #262626;
-  color: #262626;
+body .buttons-container .button {
+  margin: 6px;
+}
+
+body .buttons-container .button a {
   display: block;
   font-family: sans-serif;
   font-size: 20px;
@@ -22,6 +24,11 @@ body .buttons-container .rotating-button a {
   padding: 20px 40px;
   position: relative;
   text-decoration: none;
+}
+
+body .buttons-container .rotating-button a {
+  border: 3px solid #262626;
+  color: #262626;
 }
 
 body .buttons-container .rotating-button a:before {
@@ -46,4 +53,35 @@ body .buttons-container .rotating-button a:before {
 body .buttons-container .rotating-button a:hover:before {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+}
+
+body .buttons-container .swipe-button a {
+  border: 3px solid #351435;
+  color: #351435;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+body .buttons-container .swipe-button a:before {
+  background-color: #351435;
+  content: '';
+  height: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+body .buttons-container .swipe-button a:hover {
+  color: #fff;
+}
+
+body .buttons-container .swipe-button a:hover:before {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
