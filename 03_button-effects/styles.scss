@@ -1,11 +1,23 @@
 
+$pastel-yellow: rgb(248, 226, 128);
+$pastel-purple: #D18BC0;
+$pastel-blue: #55CBD3;
+$pastel-orange: #FE8E7B;
+$pastel-green: #97ED97;
+$pastel-pink: #FF6787;
+
+$dark-grey: rgb(75, 74, 74);
+
+
 body {
     .buttons-container {
-        height: 100vh;
-        margin: 20px;
+        //height: 100vh;
+        margin: 50px auto;
+        max-width: 1000px;
 
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         justify-content: center;
 
         // Common styles
@@ -23,13 +35,14 @@ body {
             }
         }
 
+
         .rotating-button {
             a {
-                border: 3px solid #262626;
-                color: #262626;  
+                border: 3px solid $dark-grey;
+                color: $dark-grey;  
 
                 &:before {
-                    background-color: #fff200;
+                    background-color: $pastel-yellow;
                     content: '';
                     height: 100%;
                     transform-origin: bottom left;
@@ -47,15 +60,14 @@ body {
             }
         }
 
-
         .swipe-button {
             a {
-                border: 3px solid #351435;
-                color: #351435;
+                border: 3px solid $pastel-purple;
+                color: $pastel-purple;
                 transition: all 1s;
     
                 &:before {
-                    background-color: #351435;
+                    background-color: $pastel-purple;
                     content: '';
                     height: 100%;
                     transform: translateX(-100%);
@@ -78,6 +90,166 @@ body {
             }
         }
 
+        .opening-button {
+            a {
+                border: 3px solid $pastel-blue;
+                color: $pastel-blue;
+                position: relative;
+                transition: 1s;
+
+                &:before {
+                    content: '';
+                    background-color: $pastel-blue;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    transform: rotateX(90deg);
+                    transition: 1s;
+                    width: 100%;
+                    z-index: -1;
+                }
+
+                &:after {
+                    content: '';
+                    background-color: $pastel-blue;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    transform: rotateY(90deg);
+                    transition: 1s;
+                    width: 100%;
+                    z-index: -1;
+                }
+
+                &:hover {
+                    color: white;
+
+                    &:before { transform: rotateX(0); }
+                    &:after { transform: rotateY(0); }
+                }
+            }
+        }
+
+        .stretch-button {
+            a {
+                border: 3px solid $pastel-orange;
+                color: $pastel-orange;
+                font-family: 'roboto';
+                font-weight: 300;
+                letter-spacing: -1px;
+                text-transform: uppercase;
+                transition: all 0.5s;
+
+                &:hover {
+                    border: 7px solid $pastel-orange;
+                    font-weight: 900;
+                    letter-spacing: 6px;
+                }
+            }
+        }
+
+        .drop-content-button {
+            a {
+                background-color: $dark-grey;
+                border: 3px solid #FFF;
+                color: #FFF;
+                overflow: hidden;
+                position: relative;
+                transition: all 0.8s;
+
+                &:before {
+                    content: 'Hello!';
+                    background-color: $pastel-green;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    transform: translateY(-100%);
+                    transition: all 0.8s;
+                    width: 100%;
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                &:hover:before { transform: translateY(0); }
+            }
+        }
+
+        .glowing-button {
+            a {
+                background-color: $dark-grey;
+                border: 3px solid #FFF;
+                color: #FFF;
+                overflow: hidden;
+                position: relative;
+                transition: all 0.8s;
+
+                &:before {
+                    content: '';
+                    background-color: #FFF;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 25px;
+                    transform: translateX(-100%) rotate(45deg);
+                    transition: all 0.3s;
+                }
+
+                &:hover { background-color: $pastel-pink; }
+                &:hover:before { transform: translateX(100%) rotate(45deg); }
+            }
+        }
+
+        .move-text-content-button {
+            a {
+                background-color: $dark-grey;
+                border: 3px solid $dark-grey;
+                color: transparent;
+                overflow: hidden;
+                position: relative;
+
+                &:before {
+                    content: 'Hover Me';
+                    background-color: $pastel-yellow;
+                    color: $dark-grey;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    transition: all 0.5s;
+                    width: 100%;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                &:after {
+                    content: 'Hover Me';
+                    background-color: $pastel-yellow;
+                    color: $dark-grey;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    transform: translate(-100%, 100%);
+                    transition: all 0.5s;
+                    width: 100%;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                &:hover:before { transform: translate(100%, -100%); }
+                &:hover:after { transform: translate(0, 0); }
+            }
+        }
 
     }
 }
