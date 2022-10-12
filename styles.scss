@@ -1,0 +1,41 @@
+
+span {
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 40px 6px;
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px 6px;
+
+    .option-button {
+        background-color: rgb(92, 92, 238);
+        border-radius: 11px;
+        cursor: pointer;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 22px;
+        padding: 12px;
+        text-align: center;
+        width: 100%;
+
+        a {
+            color: #FFF;
+            display: block;
+            letter-spacing: 1px;
+            text-decoration: none;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        &:hover { background-color: rgba(92, 92, 238, 0.8); }
+    }
+}

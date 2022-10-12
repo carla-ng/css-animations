@@ -1,15 +1,20 @@
 
-$pastel-yellow: rgb(248, 226, 128);
+$pastel-yellow: #E7CD5C;
 $pastel-purple: #D18BC0;
-$pastel-blue: #55CBD3;
+$pastel-blue: #35CAD4;
 $pastel-orange: #FE8E7B;
-$pastel-green: #97ED97;
+$pastel-green: #62A862;
 $pastel-pink: #FF6787;
 
-$dark-grey: rgb(107, 106, 106);
+$light-color: #FFF;
+$dark-color: rgb(99, 98, 98);
+
+$background-color: rgb(46, 45, 45);
 
 
 body {
+    background-color: $background-color;
+
     .buttons-container {
         //height: 100vh;
         margin: 50px auto;
@@ -22,7 +27,7 @@ body {
 
         // Common styles
         .button {
-            margin: 40px 70px;
+            margin: 40px;
 
             a {
                 display: block;
@@ -38,8 +43,8 @@ body {
 
         .rotating-button {
             a {
-                border: 3px solid $dark-grey;
-                color: $dark-grey;  
+                border: 3px solid $light-color;
+                color: $light-color;  
 
                 &:before {
                     background-color: $pastel-yellow;
@@ -161,7 +166,7 @@ body {
 
                 &:before {
                     content: 'Hello!';
-                    background-color: $dark-grey;
+                    background-color: $pastel-purple;
                     height: 100%;
                     left: 0;
                     position: absolute;
@@ -200,23 +205,24 @@ body {
                     transition: all 0.3s;
                 }
 
-                &:hover { background-color: $dark-grey; }
+                &:hover { background-color: $pastel-yellow; }
                 &:hover:before { transform: translateX(100%) rotate(45deg); }
             }
         }
 
         .move-text-content-button {
             a {
-                background-color: $dark-grey;
-                border: 3px solid $dark-grey;
+                background-color: transparent;
+                border: 3px solid $light-color;
                 color: transparent;
+                font-weight: bold;
                 overflow: hidden;
                 position: relative;
 
                 &:before {
                     content: 'Hover Me';
                     background-color: $pastel-yellow;
-                    color: $dark-grey;
+                    color: $dark-color;
                     height: 100%;
                     left: 0;
                     position: absolute;
@@ -232,7 +238,7 @@ body {
                 &:after {
                     content: 'Hover Me';
                     background-color: $pastel-yellow;
-                    color: $dark-grey;
+                    color: $dark-color;
                     height: 100%;
                     left: 0;
                     position: absolute;
@@ -328,7 +334,7 @@ body {
 
                 &:before{
                     content: 'Hover me';
-                    background-color: $dark-grey;
+                    background-color: $pastel-green;
                     height: 100%;
                     left: 0;
                     position: absolute;
@@ -368,17 +374,24 @@ body {
         }
 
         .swapping-left-to-right-button {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             a {
-                border: 3px solid $pastel-green;
+                border: 3px solid $light-color;
                 color: transparent;
                 overflow: visible;
                 position: relative;
                 text-transform: uppercase;
+                width: 150px;
 
                 &:before {
                     content: 'Hover me';
-                    background-color: $dark-grey;
-                    color: $pastel-green;
+                    background-color: $pastel-green;
+                    color: $light-color;
                     height: 100%;
                     left: 0;
                     position: absolute;
@@ -393,8 +406,8 @@ body {
 
                 &:after {
                     content: 'Hover me';
-                    background-color: $dark-grey;
-                    color: $pastel-green;
+                    background-color: $pastel-green;
+                    color: $light-color;
                     height: 100%;
                     left: -100%;
                     opacity: 0;
@@ -425,5 +438,678 @@ body {
             }
         }
 
+        .circles-to-background-button {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                background-color: transparent;
+                border: none;
+                color: $pastel-pink;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                height: 40px;
+                line-height: 40px;
+                overflow: visible;
+                text-align: center;
+                text-transform: uppercase;
+                transition: all 0.5s;
+                width: 200px;
+
+                span {
+                    background-color: $pastel-pink;
+                    border-radius: 8px;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    transform: scale(0);
+                    transition: all 0.3s;
+                    width: 100%;
+                    z-index: -1;
+                }
+
+                &:before, &:after {
+                    content: '';
+                    background-color: $pastel-pink;
+                    border-radius: 50%;
+                    height: 20px;
+                    opacity: 0;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    transition: all 0.4s;
+                    width: 20px;
+                    z-index: -1;
+                }
+
+                &:before {
+                    left: 0;
+                    box-shadow: -100px 0 0 $pastel-pink;
+                }
+
+                &:after {
+                    right: 0;
+                    box-shadow: 100px 0 0 $pastel-pink;
+                }
+
+                &:hover {
+                    color: #FFF;
+                    transition-delay: 0.4s;
+
+                    span {
+                        transform: scale(1);
+                        transition-delay: 0.4s;
+                    }
+                    
+                    &:before {
+                        left: 50%;
+                        box-shadow: 30px 0 0 $pastel-pink;
+                        opacity: 1;
+                        transform: translateX(-50%) translateY(-50%);
+                    }
+
+                    &:after {
+                        right: 50%;
+                        box-shadow: -30px 0 0 $pastel-pink;
+                        opacity: 1;
+                        transform: translateX(50%) translateY(-50%);
+                    }
+                }
+            }
+        }
+
+        .two-background-colors-button {
+            a {
+                width: 200px;
+                height: 40px;
+                text-transform: uppercase;
+                background-color: transparent;
+                text-align: center;
+                line-height: 40px;
+                font-weight: bold;
+                letter-spacing: 2px;
+                position: relative;
+                transition: all 0.2s;
+                color: #FFF;
+                overflow: visible;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -3px;
+                    left: -3px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $pastel-blue;
+                    z-index: -1;
+                    mix-blend-mode: multiply;
+                    transition: all 0.2s;
+                    transform-origin: top;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 3px;
+                    left: 3px;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $pastel-pink;
+                    z-index: -1;
+                    mix-blend-mode: multiply;
+                    transition: all 0.2s;
+                    transform-origin: bottom;
+                }
+
+                &:hover {
+                    color: $light-color;
+
+                    &:before {
+                        top: -6px;
+                        left: 0;
+                        transform: perspective(1000px) rotateX(75deg);
+                    }
+
+                    &:after {
+                        top: 6px;
+                        left: 0;
+                        transform: perspective(1000px) rotateX(-75deg);
+                    }
+                }
+            }
+        }
+
+        .creative-splitted-button {
+            a {
+                border: 3px solid $pastel-yellow;
+                color: $pastel-yellow;
+                font-size: 25px;
+                letter-spacing: 3px;
+                padding: 25px 50px;
+                text-transform: uppercase;
+                transition: all 0.2s;
+
+                &:before, &:after,
+                span:before, span:after {
+                    content: '';
+                    background-color: $pastel-yellow;
+                    height: 100%;
+                    position: absolute;
+                    transition: all 0.5s;
+                    width: 25%;
+                    z-index: -1;
+                }
+
+                &:before {
+                    top: 100%;
+                    left: 0;
+                }
+
+                &:after {
+                    top: -100%;
+                    left: 25%;
+                    transition-delay: 0.1s;
+                }
+
+                span:before {
+                    top: 100%;
+                    right: 25%;
+                    transition-delay: 0.2s;
+                }
+
+                span:after {
+                    top: -100%;
+                    right: 0;
+                    transition-delay: 0.3s;
+                }
+
+                &:hover {
+                    color: $light-color;
+
+                    &:before {
+                        top: 0;
+                        left: 0;
+                    }
+
+                    &:after {
+                        top: 0;
+                        left: 25%;
+                    }
+
+                    span:before {
+                        top: 0;
+                        right: 25%;
+                    }
+
+                    span:after {
+                        top: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        .border-swapping-button {
+            a {
+                color: $pastel-purple;
+                font-size: 18px;
+                height: 60px;
+                letter-spacing: 3px;
+                line-height: 60px;
+                overflow: visible;
+                padding: 0;
+                text-align: center;
+                text-transform: uppercase;
+                width: 200px;
+
+                &:before {
+                    content: '';
+                    border-left: 2px solid $pastel-pink;
+                    border-right: 2px solid $pastel-purple;
+                    height: 90px;
+                    left: 0;
+                    position: absolute;
+                    top: -15px;
+                    transition: all 0.4s;
+                    width: 200px;
+                }
+
+                &:after {
+                    content: '';
+                    border-bottom: 2px solid $pastel-purple;
+                    border-top: 2px solid $pastel-pink;
+                    height: 60px;
+                    left: -15px;
+                    position: absolute;
+                    top: 0;
+                    transition-delay: 0.4s;
+                    transition: all 0.4s;
+                    width:230px;
+                }
+
+                &:hover {
+                    &:before { transform: rotateY(180deg); }
+                    &:after { transform: rotateX(180deg); }
+                }
+            }
+        }
+
+        .growing-border-button {
+            background-color: $pastel-blue;
+            border: none;
+            color: #FFF;
+            cursor: pointer;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 22px;
+            padding: 12px 40px;
+            position: relative;
+            text-transform: uppercase;
+
+            &:before {
+                content: '';
+                border-left: 2px solid $pastel-blue;
+                border-top: 2px solid $pastel-blue;
+                height: 24px;
+                left: -5px;
+                position: absolute;
+                top: -5px;
+                transition: all 0.25s;
+                width: 24px;
+            }
+
+            &:after {
+                content: '';
+                border-bottom: 2px solid $pastel-blue;
+                border-right: 2px solid $pastel-blue;
+                bottom: -5px;
+                height: 24px;
+                position: absolute;
+                right: -5px;
+                transition: all 0.25s;
+                width: 24px;
+            }
+
+            &:hover {
+                &:before, &:after {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
+        .rotating-first-letter-button {
+            a {
+                border: 2px solid $light-color;
+                color: $light-color;
+                font-size: 22px;
+                height: 60px;
+                line-height: 60px;
+                overflow: visible;
+                padding: 0;
+                text-align: center;
+                transition: all 0.2s;
+                width: 160px;
+
+                span {
+                    color: transparent;
+                    position: relative;
+
+                    &:before {
+                        content: 'H';
+                        color: $light-color;
+                        position: absolute;
+                        transition: all 0.2s;
+                    }
+                }
+
+                &:before {
+                    content: '';
+                    background-color: $light-color;
+                    height: 100%;
+                    left: 0;
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    transition: all 0.8s;
+                    width: 100%;
+                    z-index: -1;
+                }
+
+                &:hover {
+                    color: $dark-color;
+
+                    span {
+                        &:before {
+                            color: $dark-color;
+                            font-size: 60px;
+                            transform: translate(-65%, -10%) rotate(360deg);
+                        }
+                    }
+
+                    &:before {
+                        opacity: 1;
+                        transform: rotate(15deg);
+                    }
+                }
+            }
+        }
+
+        .four-growing-borders-button {
+            background-color: transparent;
+            border: none;
+            color: $pastel-purple;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            height: 50px;
+            letter-spacing: 5px;
+            line-height: 50px;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            text-transform: uppercase;
+            width: 200px;
+
+            span {
+                &:before {
+                    content: '';
+                    background-color: $pastel-purple;
+                    height: 100%;
+                    position: absolute;
+                    right: 0;
+                    top: -100%;
+                    transition: all 0.5s;
+                    width: 4px;
+                }
+
+                &:after {
+                    content: '';
+                    background-color: $pastel-purple;
+                    bottom: -100%;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    transition: all 0.5s;
+                    width: 3px;
+                }
+            }
+
+            &:before {
+                content: '';
+                background-color: $pastel-purple;
+                height: 3px;
+                left: -100%;
+                position: absolute;
+                top: 0;
+                transition: all 0.5s;
+                width: 100%;
+            }
+
+            &:after {
+                content: '';
+                background-color: $pastel-purple;
+                bottom: 0;
+                height: 3px;
+                position: absolute;
+                right: -100%;
+                transition: all 0.5s;
+                width: 100%;
+            }
+
+            &:hover {
+                span {
+                    &:before { top: 0; }
+                    &:after { bottom: 0; }
+                }
+
+                &:before { left: 0; }
+                &:after { right: 0; }
+            }
+        }
+
+        .animated-wave-button {
+            a {
+                border: 2px solid #00AEFF;
+                color: #00AEFF;
+                font-size: 18px;
+                letter-spacing: 3px;
+                padding: 15px 30px;
+                text-transform: uppercase;
+                transition: all 0.5s;
+
+                .wave {
+                    background-color: #00AEFF;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: calc(100% + 22px);
+                    transition: all 1s;
+                    width: 100%;
+                    z-index: -1;                
+
+                    &:before {
+                        content: '';
+                        animation: wavy 0.5s linear infinite;
+                        background: url('imgs/wave.png');
+                        height: 22px;
+                        left: 0;
+                        position: absolute;
+                        top: -22px;
+                        width: 100%;
+                    }
+                }
+
+                &:hover {
+                    color: #FFF;
+                    .wave { top: 0; }
+                }
+            }
+        }
+
+        .two-cuts-button {
+            a {
+                color: $light-color;
+                font-size: 22px;
+                height: 60px;
+                line-height: 60px;
+                padding: 0;
+                text-align: center;
+                text-transform: capitalize;
+                transition: all 0.2s;
+                width: 160px;
+
+                span {
+                    background-color: transparent;
+                    border: 2px solid $light-color;
+                    height: calc(100% - 4px);
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: calc(100% - 4px);
+                    z-index: -1;
+
+                    &:before {
+                        content: '';
+                        background-color: $background-color;
+                        height: 500%;
+                        left: 50%;
+                        position: absolute;
+                        top: 50%;
+                        transform: translate(-50%, -50%) rotate(-60deg);
+                        transition: all 0.2s;
+                        width: 8%;
+                    }
+                }
+
+                &:hover {
+                    color: $background-color;
+
+                    span {
+                        &:before {
+                            background-color: $light-color;
+                            transform: translate(-50%, -50%) rotate(60deg);
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        .two-parts-skewed-button {
+            a {
+                background: transparent;
+                color: $light-color;
+                font-family: 'Lato', sans-serif;
+                font-size: 22px;
+                font-weight: bold;
+                letter-spacing: 7px;
+                overflow: visible;
+                padding: 18px 26px;
+                text-transform: uppercase;
+
+                &:before {
+                    content: '';
+                    background: $pastel-pink;
+                    height: 100%;
+                    left: -1%;
+                    position: absolute;
+                    top: -5px;
+                    transform: skewX(30deg);
+                    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                    width: 50%;
+                    z-index: -1;
+                }
+
+                &:after {
+                    content: '';
+                    background: $pastel-green;
+                    height: 100%;
+                    left: 51%;
+                    position: absolute;
+                    top: 5px;
+                    transform: skewX(30deg);
+                    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                    width: 50%;
+                    z-index: -1;
+                }
+
+                &:hover {
+                    &:before {
+                        left: 50%;
+                        top: 0;
+                        transform: skewX(0deg);
+                    }
+
+                    &:after {
+                        left: 0;
+                        top: 0;
+                        transform: skewX(0deg);
+                    }
+                }
+            }
+        }
+
+        .pulsing-button {
+            a {
+                background-color: $light-color;
+                border-radius: 100px;
+                color: $background-color;
+                font-size: 24px;
+                overflow: visible;
+                padding: 25px 50px;
+                text-transform: uppercase;
+                transition: all 0.2s;
+
+                &:before {
+                    content: '';
+                    background-color: $light-color;
+                    border-radius: 100px;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    transition: all 0.4s;
+                    width: 100%;
+                    z-index: -1;
+                }
+
+                &:hover {
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                    transform: translateY(-3px);
+
+                    &:before {
+                        opacity: 0;
+                        transform: scaleX(1.4) scaleY(1.6);
+                    }
+                }
+
+                &:active {
+                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+                    transform: translateY(-1px);
+                }
+            }
+        }
+
+        .diagonal-swipe-button {
+            a {
+                border: 4px solid $pastel-orange;
+                color: $pastel-orange;
+                font-size: 24px;
+                height: 80px;
+                letter-spacing: 3px;
+                line-height: 80px;
+                padding: 0;
+                text-align: center;
+                text-transform: uppercase;
+                transition: all 0.5s;
+                width: 250px;
+
+                &:before {
+                    content: '';
+                    border-bottom: 40px solid $pastel-orange;
+                    border-right: 40px solid transparent;
+                    border-top: 40px solid $pastel-orange;
+                    bottom: 0;
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    transform: translateX(-100%);
+                    transition: all 0.5s;
+                    z-index: -1;
+                }
+
+                &:after {
+                    content: '';
+                    border-bottom: 40px solid $pastel-orange;
+                    border-left: 40px solid transparent;
+                    border-top: 40px solid $pastel-orange;
+                    bottom: 0;
+                    left: 0;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    transform: translateX(100%);
+                    transition: all 0.5s;
+                    z-index: -1;
+                }
+
+                &:hover {
+                    color: $background-color;
+
+                    &:before, &:after { transform: translateX(0); }
+                }
+            }
+        }
+
     }
+}
+
+
+@keyframes wavy {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 118px; }
 }
