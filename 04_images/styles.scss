@@ -1,32 +1,47 @@
 html { height: 100%; }
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+html, body {
+    margin: 0;
+    padding: 0;
+}
 
-    font-family: 'Lato', sans-serif;
-    height: 100%;
+body {
+    min-height: 100%;
+
+    .intro-text {
+        font-size: 1.2rem;
+        padding: 22px 12px 12px;
+        text-align: center;
+    }
 
     .images-container {
-        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        //height: 100%;
+
+
+        /*********************
+         *       BASES       *
+         *********************/
 
         .img-base-1 {
+            font-family: 'Lato', sans-serif;
             height: auto;
-            margin: 30px 0;
+            margin: 30px;
             overflow: hidden;
             position: relative;
             width: 500px;
     
             img {
                 height: auto;
-                transition: all 0.2s;
+                transition: all 0.5s;
                 width: 100%;
             }
     
             .caption {
                 background-color: rgba(0, 0, 0, 0);
-                color: #FFF;
+                color: #fff;
                 height: 100%;
                 left: 0;
                 opacity: 0;
@@ -47,19 +62,177 @@ body {
     
                 p {
                     font-size: 18px;
-                    text-transform: capitalize;
+                    line-height: 1.7;
+                    margin-inline: 16px;
+                    text-align: center;
                 }
             }
         }
 
+        .img-base-2 {
+            border-radius: 10px;
+            font-family: 'Raleway', sans-serif;
+            height: auto;
+            margin: 30px;
+            overflow: hidden;
+            position: relative;
+            width: 500px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                //background-color: #05bfd8;
+                background-color: #000;
+                height: 100%;
+                opacity: 0.6;
+                transform: translateY(100%);
+                transition: all 0.25s;
+                transition-delay: 0.25s;
+                width: 100%;
+            }
+    
+            img {
+                height: auto;
+                //transition: all 0.5s;
+                width: 100%;
+            }
+    
+            .caption {
+                //background-color: rgba(0, 0, 0, 0);
+                color: #fff;
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                transform: translateY(-20px);
+                transition: all 0.25s;
+                width: 100%;
+    
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+    
+                h2, h5 {
+                    font-weight: 400;
+                    margin: 0;
+                }
+
+                h2 {
+                    letter-spacing: 1px;
+                    margin-bottom: 10px;
+                    text-transform: uppercase;
+                }
+
+                h5 {
+                    background-color: #fc8b5b;
+                    letter-spacing: 1.5px;
+                    line-height: 1.2;
+                    margin-inline: 16px;
+                    max-width: 60%;
+                    padding: 5px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .img-base-3 {
+            font-family: 'Lato', sans-serif;
+            height: 250px;
+            margin: 30px;
+            overflow: hidden;
+            position: relative;
+            width: 500px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                background-color: #000;
+                height: 220%;
+                opacity: 0.6;
+                transform: translate(600px, 250px) rotate(45deg);
+                transition: all 0.25s;
+                width: 120%;
+            }
+    
+            img {
+                height: auto;
+                width: 100%;
+            }
+    
+            .caption {
+                color: #fff;
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                text-transform: uppercase;
+                top: 0;
+                //transition: all 0.25s;
+                width: 100%;
+    
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+    
+                h2, p, a {
+                    font-weight: 400;
+                    text-align: center;
+                    transition: all 0.25s;
+                }
+
+                h2 {
+                    background-color: #fc8b5b;
+                    font-size: 17px;
+                    margin-top: 15px;
+                    padding: 20px;
+                    transform: translate(200px, -200px);
+                    width: 100%;
+                }
+
+                p {
+                    align-self: center;
+                    font-size: 16px;
+                    margin: 0;
+                    margin-bottom: 25px;
+                    transform: translate(-200px, 200px);
+                    width: 80%;
+                }
+
+                a {
+                    align-self: center;
+                    background-color: #000;
+                    color: #fff;
+                    display: block;
+                    padding: 10px 15px;
+                    text-decoration: none;
+                    transform: translateY(100px);
+                    width: 100px;
+                }
+            }
+        }
+
+        
+        /*********************
+         *      EFFECTS      *
+         *********************/
+
         .img-effect-1 {
             &:hover {
+                img { transform: scale(1.3) rotate(15deg); }
+
                 .caption {
                     background-color: rgba(0, 0, 0, 0.5);
                     opacity: 1;
                 }
-
-                img { transform: scale(1.3) rotate(15deg); }
             }
         }
 
@@ -70,12 +243,91 @@ body {
             }
 
             &:hover {
+                img { transform: scale(1.3) rotate(-15deg); }
+
                 .caption {
                     background-color: rgba(0, 0, 0, 0.5);
                     transform: translateX(0);
                 }
+            }
+        }
 
-                img { transform: scale(1.3) rotate(-15deg); }
+        .img-effect-3 {
+            .caption {
+                background-color: #000;
+                opacity: 1;
+                transform: translateX(-100%);
+            }
+
+            &:hover {
+                img { transform: translateX(100%); }
+
+                .caption { transform: translateX(0); }
+            }
+        }
+
+        .img-effect-4 {
+            .caption {
+                background-color: #000;
+                bottom: 0;
+                height: 50%;
+                opacity: 1;
+                top: auto;
+                transform: translateY(100%);
+            }
+
+            &:hover {
+                img { transform: translateY(-50%); }
+
+                .caption { transform: translateY(0); }
+            }
+        }
+
+        .img-effect-5 {
+            &:hover {
+                &:before {
+                    transform: translateY(0);
+                    transition-delay: 0s;
+                }
+
+                .caption {
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition-delay: 0.25s;
+                }
+            }
+        }
+
+        .img-effect-6 {
+            border: 5px solid #05bfd8;
+
+            &:before { content: none; }
+
+            img {
+                transition: transform 1s;
+
+                &:hover { transform: scale(1.3) rotate(9deg); }
+            }
+        }
+
+        .img-effect-7 {
+            &:hover {
+                .caption {
+                    opacity: 1;
+
+                    h2, p { transform: translate(0, 0); }
+
+                    h2 { transition-delay: 0.3s; }
+                    p { transition-delay: 0.4s; }
+
+                    a {
+                        transform: translateY(0);
+                        transition-delay: 0.5s;
+                    }
+                }
+                &:before {
+                    transform: translate(-50px, -150px) rotate(45deg);
+                }
             }
         }
 

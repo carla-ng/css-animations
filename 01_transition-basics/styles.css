@@ -5,12 +5,9 @@ button {
   border: none;
   color: #fff;
   font-size: 28px;
-  -webkit-transition-property: background-color;
   transition-property: background-color;
-  -webkit-transition-duration: 3000ms;
-          transition-duration: 3000ms;
+  transition-duration: 3000ms;
 }
-
 button:hover {
   background-color: purple;
 }
@@ -18,10 +15,9 @@ button:hover {
 .container {
   width: 960px;
 }
-
 .container .move {
   background-color: #e77186;
-  border-radius: .5em;
+  border-radius: 0.5em;
   color: #fff;
   cursor: pointer;
   font-size: 20px;
@@ -31,40 +27,26 @@ button:hover {
   text-align: center;
   height: 50px;
   width: 150px;
-  -webkit-transition-property: translate();
   transition-property: translate();
-  -webkit-transition-duration: 3s;
-          transition-duration: 3s;
+  transition-duration: 3s;
 }
-
 .container .move:hover {
-  -webkit-transform: translate(900px, 0);
-          transform: translate(900px, 0);
+  transform: translate(900px, 0);
 }
-
 .container .move#ease {
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
+  transition-timing-function: ease;
 }
-
 .container .move#linear {
-  -webkit-transition-timing-function: linear;
-          transition-timing-function: linear;
+  transition-timing-function: linear;
 }
-
 .container .move#ease-in {
-  -webkit-transition-timing-function: ease-in;
-          transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
 }
-
 .container .move#ease-out {
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
-
 .container .move#ease-in-out {
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
 }
 
 #examples div {
@@ -78,62 +60,47 @@ button:hover {
   line-height: 90px;
   margin: 20px;
   text-align: center;
-  -webkit-transition: all 1s;
   transition: all 1s;
 }
-
 #examples div.background:hover {
   background-color: blue;
 }
-
 #examples div.color:hover {
   color: yellow;
 }
-
 #examples div.font-size:hover {
   font-size: 32px;
 }
-
 #examples div.height:hover {
   height: 120px;
 }
-
 #examples div.width:hover {
   width: 340px;
 }
-
 #examples div.letter-spacing:hover {
   letter-spacing: 5px;
 }
-
 #examples div.line-height:hover {
   line-height: 120px;
 }
-
 #examples div.margin-bottom:hover {
   margin-bottom: 50px;
 }
-
 #examples div.margin-top:hover {
   margin-top: 50px;
 }
-
 #examples div.opacity:hover {
-  opacity: .3;
+  opacity: 0.3;
 }
-
 #examples div.padding:hover {
   padding: 20px;
 }
-
 #examples div.border-color, #examples div .border-width {
   border: 6px solid green;
 }
-
 #examples div.border-color:hover {
   border-color: red;
 }
-
 #examples div.border-width:hover {
   border-width: 12px;
 }

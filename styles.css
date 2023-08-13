@@ -1,6 +1,4 @@
 span {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 18px;
@@ -10,26 +8,16 @@ span {
 }
 
 .menu-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin: 0 auto;
   max-width: 600px;
   padding: 20px 6px;
 }
-
 .menu-container .option-button {
-  background-color: #5c5cee;
+  background-color: rgb(92, 92, 238);
   border-radius: 11px;
   cursor: pointer;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -39,7 +27,6 @@ span {
   text-align: center;
   width: 100%;
 }
-
 .menu-container .option-button a {
   color: #FFF;
   display: block;
@@ -48,7 +35,6 @@ span {
   white-space: nowrap;
   width: 100%;
 }
-
 .menu-container .option-button:hover {
   background-color: rgba(92, 92, 238, 0.8);
 }

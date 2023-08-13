@@ -1,27 +1,17 @@
 body {
-  background-color: #2e2d2d;
+  background-color: rgb(46, 45, 45);
 }
-
 body .buttons-container {
   margin: 50px auto;
   max-width: 1400px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
 body .buttons-container .button {
   margin: 40px;
 }
-
 body .buttons-container .button a {
   display: block;
   font-family: sans-serif;
@@ -31,50 +21,36 @@ body .buttons-container .button a {
   position: relative;
   text-decoration: none;
 }
-
 body .buttons-container .rotating-button a {
   border: 3px solid #FFF;
   color: #FFF;
 }
-
 body .buttons-container .rotating-button a:before {
   background-color: #E7CD5C;
-  content: '';
+  content: "";
   height: 100%;
-  -webkit-transform-origin: bottom left;
-          transform-origin: bottom left;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transition: -webkit-transform 0.8s;
-  transition: -webkit-transform 0.8s;
+  transform-origin: bottom left;
+  transform: rotate(-90deg);
   transition: transform 0.8s;
-  transition: transform 0.8s, -webkit-transform 0.8s;
   width: 100%;
   z-index: -1;
   position: absolute;
   left: 0;
   top: 0;
 }
-
 body .buttons-container .rotating-button a:hover:before {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  transform: rotate(0deg);
 }
-
 body .buttons-container .swipe-button a {
   border: 3px solid #D18BC0;
   color: #D18BC0;
-  -webkit-transition: all 1s;
   transition: all 1s;
 }
-
 body .buttons-container .swipe-button a:before {
   background-color: #D18BC0;
-  content: '';
+  content: "";
   height: 100%;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: all 1s;
+  transform: translateX(-100%);
   transition: all 1s;
   width: 100%;
   z-index: -1;
@@ -82,156 +58,115 @@ body .buttons-container .swipe-button a:before {
   left: 0;
   top: 0;
 }
-
 body .buttons-container .swipe-button a:hover {
   color: #fff;
 }
-
 body .buttons-container .swipe-button a:hover:before {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
-
 body .buttons-container .opening-button a {
   border: 3px solid #35CAD4;
   color: #35CAD4;
   position: relative;
-  -webkit-transition: 1s;
   transition: 1s;
 }
-
 body .buttons-container .opening-button a:before {
-  content: '';
+  content: "";
   background-color: #35CAD4;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
-  -webkit-transform: rotateX(90deg);
-          transform: rotateX(90deg);
-  -webkit-transition: 1s;
+  transform: rotateX(90deg);
   transition: 1s;
   width: 100%;
   z-index: -1;
 }
-
 body .buttons-container .opening-button a:after {
-  content: '';
+  content: "";
   background-color: #35CAD4;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
-  -webkit-transform: rotateY(90deg);
-          transform: rotateY(90deg);
-  -webkit-transition: 1s;
+  transform: rotateY(90deg);
   transition: 1s;
   width: 100%;
   z-index: -1;
 }
-
 body .buttons-container .opening-button a:hover {
   color: white;
 }
-
 body .buttons-container .opening-button a:hover:before {
-  -webkit-transform: rotateX(0);
-          transform: rotateX(0);
+  transform: rotateX(0);
 }
-
 body .buttons-container .opening-button a:hover:after {
-  -webkit-transform: rotateY(0);
-          transform: rotateY(0);
+  transform: rotateY(0);
 }
-
 body .buttons-container .stretch-button a {
   border: 3px solid #FE8E7B;
   color: #FE8E7B;
-  font-family: 'roboto';
+  font-family: "roboto";
   font-weight: 300;
   letter-spacing: -1px;
   text-transform: uppercase;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 body .buttons-container .stretch-button a:hover {
   border: 7px solid #FE8E7B;
   font-weight: 900;
   letter-spacing: 6px;
 }
-
 body .buttons-container .drop-content-button a {
   background-color: #62A862;
   border: 3px solid #FFF;
   color: #FFF;
   overflow: hidden;
   position: relative;
-  -webkit-transition: all 0.8s;
   transition: all 0.8s;
 }
-
 body .buttons-container .drop-content-button a:before {
-  content: 'Hello!';
+  content: "Hello!";
   background-color: #D18BC0;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transition: all 0.8s;
+  transform: translateY(-100%);
   transition: all 0.8s;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 body .buttons-container .drop-content-button a:hover:before {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
-
 body .buttons-container .glowing-button a {
   background-color: #FF6787;
   border: 3px solid #FFF;
   color: #FFF;
   overflow: hidden;
   position: relative;
-  -webkit-transition: all 0.8s;
   transition: all 0.8s;
 }
-
 body .buttons-container .glowing-button a:before {
-  content: '';
+  content: "";
   background-color: #FFF;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 25px;
-  -webkit-transform: translateX(-100%) rotate(45deg);
-          transform: translateX(-100%) rotate(45deg);
-  -webkit-transition: all 0.3s;
+  transform: translateX(-100%) rotate(45deg);
   transition: all 0.3s;
 }
-
 body .buttons-container .glowing-button a:hover {
   background-color: #E7CD5C;
 }
-
 body .buttons-container .glowing-button a:hover:before {
-  -webkit-transform: translateX(100%) rotate(45deg);
-          transform: translateX(100%) rotate(45deg);
+  transform: translateX(100%) rotate(45deg);
 }
-
 body .buttons-container .move-text-content-button a {
   background-color: transparent;
   border: 3px solid #FFF;
@@ -240,74 +175,50 @@ body .buttons-container .move-text-content-button a {
   overflow: hidden;
   position: relative;
 }
-
 body .buttons-container .move-text-content-button a:before {
-  content: 'Hover Me';
+  content: "Hover Me";
   background-color: #E7CD5C;
-  color: #636262;
+  color: rgb(99, 98, 98);
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 body .buttons-container .move-text-content-button a:after {
-  content: 'Hover Me';
+  content: "Hover Me";
   background-color: #E7CD5C;
-  color: #636262;
+  color: rgb(99, 98, 98);
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
-  -webkit-transform: translate(-100%, 100%);
-          transform: translate(-100%, 100%);
-  -webkit-transition: all 0.5s;
+  transform: translate(-100%, 100%);
   transition: all 0.5s;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 body .buttons-container .move-text-content-button a:hover:before {
-  -webkit-transform: translate(100%, -100%);
-          transform: translate(100%, -100%);
+  transform: translate(100%, -100%);
 }
-
 body .buttons-container .move-text-content-button a:hover:after {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
+  transform: translate(0, 0);
 }
-
 body .buttons-container .creative-text-scaling-button a {
   border: 3px solid #D18BC0;
   color: #D18BC0;
   position: relative;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   overflow: hidden;
 }
-
 body .buttons-container .creative-text-scaling-button a:before {
-  content: 'Hover Me';
+  content: "Hover Me";
   background-color: #D18BC0;
   color: #FFF;
   height: 100%;
@@ -315,28 +226,17 @@ body .buttons-container .creative-text-scaling-button a:before {
   opacity: 0;
   position: absolute;
   top: 0;
-  -webkit-transform: scale(5);
-          transform: scale(5);
-  -webkit-transition: all 0.5s;
+  transform: scale(5);
   transition: all 0.5s;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 body .buttons-container .creative-text-scaling-button a:hover:before {
   opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
-
 body .buttons-container .circular-swaping-button {
   border: 2px solid #35CAD4;
   background: none;
@@ -348,32 +248,26 @@ body .buttons-container .circular-swaping-button {
   padding: 20px 40px;
   position: relative;
   text-transform: uppercase;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 body .buttons-container .circular-swaping-button:before {
-  content: '';
+  content: "";
   background-color: #35CAD4;
   border-radius: 0 0 50% 50%;
   height: 0;
   left: 0;
   position: absolute;
   top: 0;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   width: 100%;
   z-index: -1;
 }
-
 body .buttons-container .circular-swaping-button:hover {
   color: #FFF;
 }
-
 body .buttons-container .circular-swaping-button:hover:before {
   height: 100%;
 }
-
 body .buttons-container .creative-rotating-three-layers-button a {
   background-color: #FE8E7B;
   color: #FFF;
@@ -381,77 +275,46 @@ body .buttons-container .creative-rotating-three-layers-button a {
   overflow: visible;
   text-transform: uppercase;
 }
-
 body .buttons-container .creative-rotating-three-layers-button a:before {
-  content: 'Hover me';
+  content: "Hover me";
   background-color: #62A862;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
-  -webkit-transform-origin: top;
-          transform-origin: top;
-  -webkit-transform: rotateX(270deg);
-          transform: rotateX(270deg);
-  -webkit-transition: all 0.5s;
+  transform-origin: top;
+  transform: rotateX(270deg);
   transition: all 0.5s;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 body .buttons-container .creative-rotating-three-layers-button a:after {
-  content: 'Hover me';
+  content: "Hover me";
   background-color: #FF6787;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
-  -webkit-transform-origin: top;
-          transform-origin: top;
-  -webkit-transform: rotateX(270deg);
-          transform: rotateX(270deg);
-  -webkit-transition: all 0.5s;
+  transform-origin: top;
+  transform: rotateX(270deg);
   transition: all 0.5s;
-  -webkit-transition-delay: 0.25s;
-          transition-delay: 0.25s;
+  transition-delay: 0.25s;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 body .buttons-container .creative-rotating-three-layers-button a:hover:before, body .buttons-container .creative-rotating-three-layers-button a:hover:after {
-  -webkit-transform: rotateX(0deg);
-          transform: rotateX(0deg);
+  transform: rotateX(0deg);
 }
-
 body .buttons-container .swapping-left-to-right-button {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 body .buttons-container .swapping-left-to-right-button a {
   border: 3px solid #FFF;
   color: transparent;
@@ -460,31 +323,22 @@ body .buttons-container .swapping-left-to-right-button a {
   text-transform: uppercase;
   width: 150px;
 }
-
 body .buttons-container .swapping-left-to-right-button a:before {
-  content: 'Hover me';
+  content: "Hover me";
   background-color: #62A862;
   color: #FFF;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
-  -webkit-transition: all 0.6s;
   transition: all 0.6s;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 body .buttons-container .swapping-left-to-right-button a:after {
-  content: 'Hover me';
+  content: "Hover me";
   background-color: #62A862;
   color: #FFF;
   height: 100%;
@@ -492,49 +346,29 @@ body .buttons-container .swapping-left-to-right-button a:after {
   opacity: 0;
   position: absolute;
   top: 0;
-  -webkit-transform: scale(0) rotatye(0deg);
-          transform: scale(0) rotatye(0deg);
-  -webkit-transition: all 0.6s;
+  transform: scale(0) rotatye(0deg);
   transition: all 0.6s;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 body .buttons-container .swapping-left-to-right-button a:hover:before {
   left: 100%;
   opacity: 0;
-  -webkit-transform: scale(0) rotateY(360deg);
-          transform: scale(0) rotateY(360deg);
+  transform: scale(0) rotateY(360deg);
 }
-
 body .buttons-container .swapping-left-to-right-button a:hover:after {
   left: 0;
   opacity: 1;
-  -webkit-transform: scale(1) rotateY(360deg);
-          transform: scale(1) rotateY(360deg);
+  transform: scale(1) rotateY(360deg);
 }
-
 body .buttons-container .circles-to-background-button {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 body .buttons-container .circles-to-background-button a {
   background-color: transparent;
   border: none;
@@ -545,11 +379,9 @@ body .buttons-container .circles-to-background-button a {
   overflow: visible;
   text-align: center;
   text-transform: uppercase;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   width: 200px;
 }
-
 body .buttons-container .circles-to-background-button a span {
   background-color: #FF6787;
   border-radius: 8px;
@@ -557,73 +389,52 @@ body .buttons-container .circles-to-background-button a span {
   left: 0;
   position: absolute;
   top: 0;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: all 0.3s;
+  transform: scale(0);
   transition: all 0.3s;
   width: 100%;
   z-index: -1;
 }
-
 body .buttons-container .circles-to-background-button a:before, body .buttons-container .circles-to-background-button a:after {
-  content: '';
+  content: "";
   background-color: #FF6787;
   border-radius: 50%;
   height: 20px;
   opacity: 0;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: all 0.4s;
+  transform: translateY(-50%);
   transition: all 0.4s;
   width: 20px;
   z-index: -1;
 }
-
 body .buttons-container .circles-to-background-button a:before {
   left: 0;
-  -webkit-box-shadow: -100px 0 0 #FF6787;
-          box-shadow: -100px 0 0 #FF6787;
+  box-shadow: -100px 0 0 #FF6787;
 }
-
 body .buttons-container .circles-to-background-button a:after {
   right: 0;
-  -webkit-box-shadow: 100px 0 0 #FF6787;
-          box-shadow: 100px 0 0 #FF6787;
+  box-shadow: 100px 0 0 #FF6787;
 }
-
 body .buttons-container .circles-to-background-button a:hover {
   color: #FFF;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
+  transition-delay: 0.4s;
 }
-
 body .buttons-container .circles-to-background-button a:hover span {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
+  transform: scale(1);
+  transition-delay: 0.4s;
 }
-
 body .buttons-container .circles-to-background-button a:hover:before {
   left: 50%;
-  -webkit-box-shadow: 30px 0 0 #FF6787;
-          box-shadow: 30px 0 0 #FF6787;
+  box-shadow: 30px 0 0 #FF6787;
   opacity: 1;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
-
 body .buttons-container .circles-to-background-button a:hover:after {
   right: 50%;
-  -webkit-box-shadow: -30px 0 0 #FF6787;
-          box-shadow: -30px 0 0 #FF6787;
+  box-shadow: -30px 0 0 #FF6787;
   opacity: 1;
-  -webkit-transform: translateX(50%) translateY(-50%);
-          transform: translateX(50%) translateY(-50%);
+  transform: translateX(50%) translateY(-50%);
 }
-
 body .buttons-container .two-background-colors-button a {
   width: 200px;
   height: 40px;
@@ -634,14 +445,12 @@ body .buttons-container .two-background-colors-button a {
   font-weight: bold;
   letter-spacing: 2px;
   position: relative;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   color: #FFF;
   overflow: visible;
 }
-
 body .buttons-container .two-background-colors-button a:before {
-  content: '';
+  content: "";
   position: absolute;
   top: -3px;
   left: -3px;
@@ -650,14 +459,11 @@ body .buttons-container .two-background-colors-button a:before {
   background-color: #35CAD4;
   z-index: -1;
   mix-blend-mode: multiply;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  -webkit-transform-origin: top;
-          transform-origin: top;
+  transform-origin: top;
 }
-
 body .buttons-container .two-background-colors-button a:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 3px;
   left: 3px;
@@ -666,30 +472,22 @@ body .buttons-container .two-background-colors-button a:after {
   background-color: #FF6787;
   z-index: -1;
   mix-blend-mode: multiply;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
+  transform-origin: bottom;
 }
-
 body .buttons-container .two-background-colors-button a:hover {
   color: #FFF;
 }
-
 body .buttons-container .two-background-colors-button a:hover:before {
   top: -6px;
   left: 0;
-  -webkit-transform: perspective(1000px) rotateX(75deg);
-          transform: perspective(1000px) rotateX(75deg);
+  transform: perspective(1000px) rotateX(75deg);
 }
-
 body .buttons-container .two-background-colors-button a:hover:after {
   top: 6px;
   left: 0;
-  -webkit-transform: perspective(1000px) rotateX(-75deg);
-          transform: perspective(1000px) rotateX(-75deg);
+  transform: perspective(1000px) rotateX(-75deg);
 }
-
 body .buttons-container .creative-splitted-button a {
   border: 3px solid #E7CD5C;
   color: #E7CD5C;
@@ -697,72 +495,56 @@ body .buttons-container .creative-splitted-button a {
   letter-spacing: 3px;
   padding: 25px 50px;
   text-transform: uppercase;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-
 body .buttons-container .creative-splitted-button a:before, body .buttons-container .creative-splitted-button a:after,
 body .buttons-container .creative-splitted-button a span:before, body .buttons-container .creative-splitted-button a span:after {
-  content: '';
+  content: "";
   background-color: #E7CD5C;
   height: 100%;
   position: absolute;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   width: 25%;
   z-index: -1;
 }
-
 body .buttons-container .creative-splitted-button a:before {
   top: 100%;
   left: 0;
 }
-
 body .buttons-container .creative-splitted-button a:after {
   top: -100%;
   left: 25%;
-  -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
+  transition-delay: 0.1s;
 }
-
 body .buttons-container .creative-splitted-button a span:before {
   top: 100%;
   right: 25%;
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
-
 body .buttons-container .creative-splitted-button a span:after {
   top: -100%;
   right: 0;
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
+  transition-delay: 0.3s;
 }
-
 body .buttons-container .creative-splitted-button a:hover {
   color: #FFF;
 }
-
 body .buttons-container .creative-splitted-button a:hover:before {
   top: 0;
   left: 0;
 }
-
 body .buttons-container .creative-splitted-button a:hover:after {
   top: 0;
   left: 25%;
 }
-
 body .buttons-container .creative-splitted-button a:hover span:before {
   top: 0;
   right: 25%;
 }
-
 body .buttons-container .creative-splitted-button a:hover span:after {
   top: 0;
   right: 0;
 }
-
 body .buttons-container .border-swapping-button a {
   color: #D18BC0;
   font-size: 18px;
@@ -775,45 +557,35 @@ body .buttons-container .border-swapping-button a {
   text-transform: uppercase;
   width: 200px;
 }
-
 body .buttons-container .border-swapping-button a:before {
-  content: '';
+  content: "";
   border-left: 2px solid #FF6787;
   border-right: 2px solid #D18BC0;
   height: 90px;
   left: 0;
   position: absolute;
   top: -15px;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   width: 200px;
 }
-
 body .buttons-container .border-swapping-button a:after {
-  content: '';
+  content: "";
   border-bottom: 2px solid #D18BC0;
   border-top: 2px solid #FF6787;
   height: 60px;
   left: -15px;
   position: absolute;
   top: 0;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
-  -webkit-transition: all 0.4s;
+  transition-delay: 0.4s;
   transition: all 0.4s;
   width: 230px;
 }
-
 body .buttons-container .border-swapping-button a:hover:before {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
-
 body .buttons-container .border-swapping-button a:hover:after {
-  -webkit-transform: rotateX(180deg);
-          transform: rotateX(180deg);
+  transform: rotateX(180deg);
 }
-
 body .buttons-container .growing-border-button {
   background-color: #35CAD4;
   border: none;
@@ -825,38 +597,32 @@ body .buttons-container .growing-border-button {
   position: relative;
   text-transform: uppercase;
 }
-
 body .buttons-container .growing-border-button:before {
-  content: '';
+  content: "";
   border-left: 2px solid #35CAD4;
   border-top: 2px solid #35CAD4;
   height: 24px;
   left: -5px;
   position: absolute;
   top: -5px;
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   width: 24px;
 }
-
 body .buttons-container .growing-border-button:after {
-  content: '';
+  content: "";
   border-bottom: 2px solid #35CAD4;
   border-right: 2px solid #35CAD4;
   bottom: -5px;
   height: 24px;
   position: absolute;
   right: -5px;
-  -webkit-transition: all 0.25s;
   transition: all 0.25s;
   width: 24px;
 }
-
 body .buttons-container .growing-border-button:hover:before, body .buttons-container .growing-border-button:hover:after {
   height: 100%;
   width: 100%;
 }
-
 body .buttons-container .rotating-first-letter-button a {
   border: 2px solid #FFF;
   color: #FFF;
@@ -866,55 +632,43 @@ body .buttons-container .rotating-first-letter-button a {
   overflow: visible;
   padding: 0;
   text-align: center;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   width: 160px;
 }
-
 body .buttons-container .rotating-first-letter-button a span {
   color: transparent;
   position: relative;
 }
-
 body .buttons-container .rotating-first-letter-button a span:before {
-  content: 'H';
+  content: "H";
   color: #FFF;
   position: absolute;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-
 body .buttons-container .rotating-first-letter-button a:before {
-  content: '';
+  content: "";
   background-color: #FFF;
   height: 100%;
   left: 0;
   opacity: 0;
   position: absolute;
   top: 0;
-  -webkit-transition: all 0.8s;
   transition: all 0.8s;
   width: 100%;
   z-index: -1;
 }
-
 body .buttons-container .rotating-first-letter-button a:hover {
-  color: #636262;
+  color: rgb(99, 98, 98);
 }
-
 body .buttons-container .rotating-first-letter-button a:hover span:before {
-  color: #636262;
+  color: rgb(99, 98, 98);
   font-size: 60px;
-  -webkit-transform: translate(-65%, -10%) rotate(360deg);
-          transform: translate(-65%, -10%) rotate(360deg);
+  transform: translate(-65%, -10%) rotate(360deg);
 }
-
 body .buttons-container .rotating-first-letter-button a:hover:before {
   opacity: 1;
-  -webkit-transform: rotate(15deg);
-          transform: rotate(15deg);
+  transform: rotate(15deg);
 }
-
 body .buttons-container .four-growing-borders-button {
   background-color: transparent;
   border: none;
@@ -931,71 +685,58 @@ body .buttons-container .four-growing-borders-button {
   text-transform: uppercase;
   width: 200px;
 }
-
 body .buttons-container .four-growing-borders-button span:before {
-  content: '';
+  content: "";
   background-color: #D18BC0;
   height: 100%;
   position: absolute;
   right: 0;
   top: -100%;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   width: 4px;
 }
-
 body .buttons-container .four-growing-borders-button span:after {
-  content: '';
+  content: "";
   background-color: #D18BC0;
   bottom: -100%;
   height: 100%;
   left: 0;
   position: absolute;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   width: 3px;
 }
-
 body .buttons-container .four-growing-borders-button:before {
-  content: '';
+  content: "";
   background-color: #D18BC0;
   height: 3px;
   left: -100%;
   position: absolute;
   top: 0;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   width: 100%;
 }
-
 body .buttons-container .four-growing-borders-button:after {
-  content: '';
+  content: "";
   background-color: #D18BC0;
   bottom: 0;
   height: 3px;
   position: absolute;
   right: -100%;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   width: 100%;
 }
-
 body .buttons-container .four-growing-borders-button:hover span:before {
   top: 0;
 }
-
 body .buttons-container .four-growing-borders-button:hover span:after {
   bottom: 0;
 }
-
 body .buttons-container .four-growing-borders-button:hover:before {
   left: 0;
 }
-
 body .buttons-container .four-growing-borders-button:hover:after {
   right: 0;
 }
-
 body .buttons-container .animated-wave-button a {
   border: 2px solid #00AEFF;
   color: #00AEFF;
@@ -1003,26 +744,21 @@ body .buttons-container .animated-wave-button a {
   letter-spacing: 3px;
   padding: 15px 30px;
   text-transform: uppercase;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 body .buttons-container .animated-wave-button a .wave {
   background-color: #00AEFF;
   height: 100%;
   left: 0;
   position: absolute;
   top: calc(100% + 22px);
-  -webkit-transition: all 1s;
   transition: all 1s;
   width: 100%;
   z-index: -1;
 }
-
 body .buttons-container .animated-wave-button a .wave:before {
-  content: '';
-  -webkit-animation: wavy 0.5s linear infinite;
-          animation: wavy 0.5s linear infinite;
+  content: "";
+  animation: wavy 0.5s linear infinite;
   background: url("imgs/wave.png");
   height: 22px;
   left: 0;
@@ -1030,15 +766,12 @@ body .buttons-container .animated-wave-button a .wave:before {
   top: -22px;
   width: 100%;
 }
-
 body .buttons-container .animated-wave-button a:hover {
   color: #FFF;
 }
-
 body .buttons-container .animated-wave-button a:hover .wave {
   top: 0;
 }
-
 body .buttons-container .two-cuts-button a {
   color: #FFF;
   font-size: 22px;
@@ -1047,11 +780,9 @@ body .buttons-container .two-cuts-button a {
   padding: 0;
   text-align: center;
   text-transform: capitalize;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
   width: 160px;
 }
-
 body .buttons-container .two-cuts-button a span {
   background-color: transparent;
   border: 2px solid #FFF;
@@ -1062,36 +793,29 @@ body .buttons-container .two-cuts-button a span {
   width: calc(100% - 4px);
   z-index: -1;
 }
-
 body .buttons-container .two-cuts-button a span:before {
-  content: '';
-  background-color: #2e2d2d;
+  content: "";
+  background-color: rgb(46, 45, 45);
   height: 500%;
   left: 50%;
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(-60deg);
-          transform: translate(-50%, -50%) rotate(-60deg);
-  -webkit-transition: all 0.2s;
+  transform: translate(-50%, -50%) rotate(-60deg);
   transition: all 0.2s;
   width: 8%;
 }
-
 body .buttons-container .two-cuts-button a:hover {
-  color: #2e2d2d;
+  color: rgb(46, 45, 45);
 }
-
 body .buttons-container .two-cuts-button a:hover span:before {
   background-color: #FFF;
-  -webkit-transform: translate(-50%, -50%) rotate(60deg);
-          transform: translate(-50%, -50%) rotate(60deg);
+  transform: translate(-50%, -50%) rotate(60deg);
   width: 100%;
 }
-
 body .buttons-container .two-parts-skewed-button a {
   background: transparent;
   color: #FFF;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 7px;
@@ -1099,97 +823,74 @@ body .buttons-container .two-parts-skewed-button a {
   padding: 18px 26px;
   text-transform: uppercase;
 }
-
 body .buttons-container .two-parts-skewed-button a:before {
-  content: '';
+  content: "";
   background: #FF6787;
   height: 100%;
   left: -1%;
   position: absolute;
   top: -5px;
-  -webkit-transform: skewX(30deg);
-          transform: skewX(30deg);
-  -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: skewX(30deg);
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   width: 50%;
   z-index: -1;
 }
-
 body .buttons-container .two-parts-skewed-button a:after {
-  content: '';
+  content: "";
   background: #62A862;
   height: 100%;
   left: 51%;
   position: absolute;
   top: 5px;
-  -webkit-transform: skewX(30deg);
-          transform: skewX(30deg);
-  -webkit-transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: skewX(30deg);
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   width: 50%;
   z-index: -1;
 }
-
 body .buttons-container .two-parts-skewed-button a:hover:before {
   left: 50%;
   top: 0;
-  -webkit-transform: skewX(0deg);
-          transform: skewX(0deg);
+  transform: skewX(0deg);
 }
-
 body .buttons-container .two-parts-skewed-button a:hover:after {
   left: 0;
   top: 0;
-  -webkit-transform: skewX(0deg);
-          transform: skewX(0deg);
+  transform: skewX(0deg);
 }
-
 body .buttons-container .pulsing-button a {
   background-color: #FFF;
   border-radius: 100px;
-  color: #2e2d2d;
+  color: rgb(46, 45, 45);
   font-size: 24px;
   overflow: visible;
   padding: 25px 50px;
   text-transform: uppercase;
-  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-
 body .buttons-container .pulsing-button a:before {
-  content: '';
+  content: "";
   background-color: #FFF;
   border-radius: 100px;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   width: 100%;
   z-index: -1;
 }
-
 body .buttons-container .pulsing-button a:hover {
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
 }
-
 body .buttons-container .pulsing-button a:hover:before {
   opacity: 0;
-  -webkit-transform: scaleX(1.4) scaleY(1.6);
-          transform: scaleX(1.4) scaleY(1.6);
+  transform: scaleX(1.4) scaleY(1.6);
 }
-
 body .buttons-container .pulsing-button a:active {
-  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
 }
-
 body .buttons-container .diagonal-swipe-button a {
   border: 4px solid #FE8E7B;
   color: #FE8E7B;
@@ -1200,13 +901,11 @@ body .buttons-container .diagonal-swipe-button a {
   padding: 0;
   text-align: center;
   text-transform: uppercase;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   width: 250px;
 }
-
 body .buttons-container .diagonal-swipe-button a:before {
-  content: '';
+  content: "";
   border-bottom: 40px solid #FE8E7B;
   border-right: 40px solid transparent;
   border-top: 40px solid #FE8E7B;
@@ -1215,15 +914,12 @@ body .buttons-container .diagonal-swipe-button a:before {
   position: absolute;
   right: 0;
   top: 0;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-  -webkit-transition: all 0.5s;
+  transform: translateX(-100%);
   transition: all 0.5s;
   z-index: -1;
 }
-
 body .buttons-container .diagonal-swipe-button a:after {
-  content: '';
+  content: "";
   border-bottom: 40px solid #FE8E7B;
   border-left: 40px solid transparent;
   border-top: 40px solid #FE8E7B;
@@ -1232,29 +928,15 @@ body .buttons-container .diagonal-swipe-button a:after {
   position: absolute;
   right: 0;
   top: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  -webkit-transition: all 0.5s;
+  transform: translateX(100%);
   transition: all 0.5s;
   z-index: -1;
 }
-
 body .buttons-container .diagonal-swipe-button a:hover {
-  color: #2e2d2d;
+  color: rgb(46, 45, 45);
 }
-
 body .buttons-container .diagonal-swipe-button a:hover:before, body .buttons-container .diagonal-swipe-button a:hover:after {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-@-webkit-keyframes wavy {
-  0% {
-    background-position-x: 0;
-  }
-  100% {
-    background-position-x: 118px;
-  }
+  transform: translateX(0);
 }
 
 @keyframes wavy {
