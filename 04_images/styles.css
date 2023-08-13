@@ -125,7 +125,6 @@ body .images-container .img-base-2 .caption h5 {
 }
 body .images-container .img-base-3 {
   font-family: "Lato", sans-serif;
-  height: 250px;
   margin: 30px;
   overflow: hidden;
   position: relative;
@@ -139,8 +138,6 @@ body .images-container .img-base-3:before {
   background-color: #000;
   height: 220%;
   opacity: 0.6;
-  transform: translate(600px, 250px) rotate(45deg);
-  transition: all 0.25s;
   width: 120%;
 }
 body .images-container .img-base-3 img {
@@ -151,7 +148,6 @@ body .images-container .img-base-3 .caption {
   color: #fff;
   height: 100%;
   left: 0;
-  opacity: 0;
   position: absolute;
   text-transform: uppercase;
   top: 0;
@@ -164,14 +160,12 @@ body .images-container .img-base-3 .caption {
 body .images-container .img-base-3 .caption h2, body .images-container .img-base-3 .caption p, body .images-container .img-base-3 .caption a {
   font-weight: 400;
   text-align: center;
-  transition: all 0.25s;
 }
 body .images-container .img-base-3 .caption h2 {
   background-color: #fc8b5b;
   font-size: 17px;
   margin-top: 15px;
   padding: 20px;
-  transform: translate(200px, -200px);
   width: 100%;
 }
 body .images-container .img-base-3 .caption p {
@@ -179,7 +173,6 @@ body .images-container .img-base-3 .caption p {
   font-size: 16px;
   margin: 0;
   margin-bottom: 25px;
-  transform: translate(-200px, 200px);
   width: 80%;
 }
 body .images-container .img-base-3 .caption a {
@@ -189,7 +182,6 @@ body .images-container .img-base-3 .caption a {
   display: block;
   padding: 10px 15px;
   text-decoration: none;
-  transform: translateY(100px);
   width: 100px;
 }
 body .images-container .img-effect-1:hover img {
@@ -256,11 +248,33 @@ body .images-container .img-effect-6 img {
 body .images-container .img-effect-6 img:hover {
   transform: scale(1.3) rotate(9deg);
 }
+body .images-container .img-effect-7 {
+  height: 250px;
+}
+body .images-container .img-effect-7:before {
+  transition: all 0.25s;
+  transform: translate(600px, 250px) rotate(45deg);
+}
+body .images-container .img-effect-7 .caption {
+  opacity: 0;
+}
+body .images-container .img-effect-7 .caption h2 {
+  transform: translate(200px, -200px);
+}
+body .images-container .img-effect-7 .caption p {
+  transform: translate(-200px, 200px);
+}
+body .images-container .img-effect-7 .caption a {
+  transform: translateY(100px);
+}
+body .images-container .img-effect-7 .caption h2, body .images-container .img-effect-7 .caption p, body .images-container .img-effect-7 .caption a {
+  transition: all 0.25s;
+}
+body .images-container .img-effect-7:hover:before {
+  transform: translate(-50px, -150px) rotate(45deg);
+}
 body .images-container .img-effect-7:hover .caption {
   opacity: 1;
-}
-body .images-container .img-effect-7:hover .caption h2, body .images-container .img-effect-7:hover .caption p {
-  transform: translate(0, 0);
 }
 body .images-container .img-effect-7:hover .caption h2 {
   transition-delay: 0.3s;
@@ -272,6 +286,142 @@ body .images-container .img-effect-7:hover .caption a {
   transform: translateY(0);
   transition-delay: 0.5s;
 }
-body .images-container .img-effect-7:hover:before {
-  transform: translate(-50px, -150px) rotate(45deg);
+body .images-container .img-effect-7:hover .caption h2, body .images-container .img-effect-7:hover .caption p {
+  transform: translate(0, 0);
+}
+body .images-container .img-effect-8 {
+  height: 250px;
+}
+body .images-container .img-effect-8:before {
+  transform: translate(650px, -100px) rotate(180deg);
+  transition: all 0.2s;
+}
+body .images-container .img-effect-8 .caption {
+  opacity: 0;
+}
+body .images-container .img-effect-8 .caption h2 {
+  transform: translateY(-150px);
+}
+body .images-container .img-effect-8 .caption p {
+  transform: translateX(300px) rotate(90deg);
+}
+body .images-container .img-effect-8 .caption a {
+  transform: translateY(-300px);
+}
+body .images-container .img-effect-8 .caption h2, body .images-container .img-effect-8 .caption p, body .images-container .img-effect-8 .caption a {
+  transition: all 0.2s;
+}
+body .images-container .img-effect-8:hover:before {
+  transform: translate(0, 0) rotate(0deg);
+}
+body .images-container .img-effect-8:hover .caption {
+  opacity: 1;
+}
+body .images-container .img-effect-8:hover .caption h2 {
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+body .images-container .img-effect-8:hover .caption p {
+  transform: translateX(0) rotate(0deg);
+  transition-delay: 0.4s;
+}
+body .images-container .img-effect-8:hover .caption a {
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+body .images-container .img-effect-9 {
+  background-color: #5e5e5e;
+  border: 10px solid #05bfd8;
+  height: auto;
+}
+body .images-container .img-effect-9 img {
+  transition: all 0.5s;
+  transition-delay: 0.5s;
+}
+body .images-container .img-effect-9:before {
+  background-color: #05bfd8;
+  transform: scale(0) rotate(-180deg);
+  transition: all 0.5s;
+}
+body .images-container .img-effect-9 .caption h2, body .images-container .img-effect-9 .caption p, body .images-container .img-effect-9 .caption a {
+  opacity: 0;
+  transition: all 0.5s;
+}
+body .images-container .img-effect-9:hover img {
+  transform: scale(0);
+  transition-delay: 0;
+}
+body .images-container .img-effect-9:hover:before {
+  transform: scale(1) rotate(0deg);
+  transition-delay: 0.5s;
+}
+body .images-container .img-effect-9:hover .caption h2, body .images-container .img-effect-9:hover .caption p, body .images-container .img-effect-9:hover .caption a {
+  opacity: 1;
+  transition-delay: 1s;
+}
+body .images-container .img-effect-10 {
+  height: auto;
+}
+body .images-container .img-effect-10:before {
+  opacity: 0;
+  background-color: #05bfd8;
+  transition: all 0.3s;
+}
+body .images-container .img-effect-10 .caption h2, body .images-container .img-effect-10 .caption p {
+  opacity: 0;
+  transition: all 0.3s;
+  transform: scale(10);
+}
+body .images-container .img-effect-10 .caption a {
+  transform: translateY(150px);
+  transition: all 0.3s;
+}
+body .images-container .img-effect-10:hover:before {
+  opacity: 0.8;
+}
+body .images-container .img-effect-10:hover .caption h2, body .images-container .img-effect-10:hover .caption p {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0.2s;
+}
+body .images-container .img-effect-10:hover .caption a {
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+body .images-container .img-effect-11 {
+  background-color: #5e5e5e;
+  border: 10px solid #05bfd8;
+  height: auto;
+}
+body .images-container .img-effect-11:before {
+  background-color: #05bfd8;
+  opacity: 0;
+  transition: all 0.3s;
+}
+body .images-container .img-effect-11 img {
+  transition: all 0.5s;
+}
+body .images-container .img-effect-11 .caption h2, body .images-container .img-effect-11 .caption p, body .images-container .img-effect-11 .caption a {
+  transform: translateY(-300px);
+  transition: all 0.2s;
+}
+body .images-container .img-effect-11:hover:before {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+body .images-container .img-effect-11:hover img {
+  opacity: 0;
+  transform: rotate(720deg) scale(0);
+}
+body .images-container .img-effect-11:hover .caption h2 {
+  transition-delay: 0.9s;
+}
+body .images-container .img-effect-11:hover .caption p {
+  transition-delay: 0.7s;
+}
+body .images-container .img-effect-11:hover .caption a {
+  transition-delay: 0.5s;
+}
+body .images-container .img-effect-11:hover .caption h2, body .images-container .img-effect-11:hover .caption p, body .images-container .img-effect-11:hover .caption a {
+  transform: translateY(0);
 }
