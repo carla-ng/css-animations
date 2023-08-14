@@ -1,0 +1,125 @@
+html {
+  height: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /********************
+   *      MENU 01     *
+   ********************/
+  /********************
+   *      MENU 02     *
+   ********************/
+}
+body .intro-text {
+  font-size: 1.2rem;
+  padding: 22px 12px 12px;
+  text-align: center;
+}
+body > div {
+  margin: 30px 20px;
+}
+body > div ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+body > div ul li {
+  list-style: none;
+}
+body > div ul li a {
+  text-decoration: none;
+}
+body .menu-01 ul li a {
+  color: #3d3d3d;
+  display: block;
+  font-size: 22px;
+  padding: 10px 15px;
+  position: relative;
+}
+body .menu-01 ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #3d3d3d;
+  height: 2px;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: all 0.5s;
+  width: 100%;
+}
+body .menu-01 ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #3d3d3d;
+  height: 2px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: all 0.5s;
+  width: 100%;
+}
+body .menu-01 ul li a:hover:before, body .menu-01 ul li a:hover:after {
+  transform: scaleX(1);
+}
+body .menu-02 ul li a {
+  color: #272727;
+  font-size: 20px;
+  margin: 0px 10px;
+  padding: 5px 10px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+body .menu-02 ul li a:before {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  border: 3px solid #eb2a6a;
+  border-width: 0 0 3px 3px;
+  height: 12px;
+  opacity: 0;
+  transition: all 0.3s;
+  width: 12px;
+}
+body .menu-02 ul li a:after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #eb2a6a;
+  border-width: 3px 3px 0 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+body .menu-02 ul li a:hover {
+  background-color: #eb2a6a;
+  color: #fff;
+}
+body .menu-02 ul li a:hover:before {
+  bottom: -8px;
+  left: -8px;
+  opacity: 1;
+}
+body .menu-02 ul li a:hover:after {
+  opacity: 1;
+  right: -8px;
+  top: -8px;
+}
