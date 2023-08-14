@@ -16,7 +16,7 @@ body {
 
     .intro-text {
         font-size: 1.2rem;
-        padding: 22px 12px 12px;
+        padding: 32px 12px;
         text-align: center;
     }
 
@@ -148,6 +148,120 @@ body {
                         }
                     }
 
+                }
+            }
+        }
+    }
+
+
+    /********************
+     *      MENU 03     *
+     ********************/
+    .menu-03 {
+        ul {
+            li {
+                a {
+                    color: #262626;
+                    color: rgb(147, 14, 180);
+                    display: block;
+                    font-weight: 700;
+                    height: 40px;
+                    line-height: 40px;
+                    position: relative;
+                    text-align: center;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    transition: all 0.5s;
+                    width: 120px;
+
+                    &:hover {
+                        color:#fff;
+
+                        span{
+                            transform: scaleX(1);
+                        }
+                    }
+                    
+                    span {
+                        background-color: #262626;
+                        height: 25%;
+                        left: 0;
+                        position: absolute;
+                        top: 0;
+                        transform: scaleX(0);
+                        transform-origin: left;
+                        transition: all 0.5s;
+                        width: 100%;
+                        z-index: -1;
+
+                        &:nth-child(2) {
+                            top: 25%;
+                            transition-delay: 0.15s
+                        }
+
+                        &:nth-child(3) {
+                            top: 50%;
+                            transition-delay: 0.3s
+                        }
+                          
+                        &:nth-child(4) {
+                            top: 75%;
+                            transition-delay: 0.45s
+                         }
+                    }
+                }
+            }
+        }
+    }
+
+
+    /********************
+     *      MENU 04     *
+     ********************/
+    .menu-04 {
+        ul {
+            li {
+                padding: 10px 20px;
+
+                a {
+                    color: #222;
+                    font-size: 20px;
+                    position: relative;
+                    text-transform: uppercase;
+
+                    &:before {
+                        content: "";
+                        background-color: #00bcd4;
+                        height: 5px;
+                        left: 0;
+                        position: absolute;
+                        top: 120%;
+                        transition: all 0.5s;
+                        width: 0;
+                    }
+
+                    &:after {
+                        content: "";
+                        background-color: #f0f;
+                        height: 5px;
+                        position: absolute;
+                        right: 0;
+                        top: 120%;
+                        transition: all 0.5s;
+                        width: 0;
+                    }
+
+                    &:hover {
+                        &:before {
+                            transform: translateX(100%);
+                            width: 50%;
+                        }
+
+                        &:after {
+                            transform: translateX(-100%);
+                            width: 50%;
+                        }
+                    }
                 }
             }
         }
