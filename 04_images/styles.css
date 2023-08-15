@@ -11,9 +11,16 @@ body {
   min-height: 100%;
 }
 body .intro-text {
+  background-color: #000;
+  color: #fff;
   font-size: 1.2rem;
-  padding: 22px 12px 12px;
+  margin: 0 0 20px 0;
+  padding: 20px 12px;
   text-align: center;
+  width: 100%;
+}
+body .intro-text span {
+  text-decoration: underline;
 }
 body .images-container {
   display: flex;

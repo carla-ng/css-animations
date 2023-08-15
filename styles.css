@@ -17,7 +17,7 @@ span {
   padding: 20px 6px;
 }
 .menu-container .option-button {
-  background-color: rgb(92, 92, 238);
+  border: 2px solid rgb(92, 92, 238);
   border-radius: 11px;
   cursor: pointer;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -25,16 +25,21 @@ span {
   margin: 6px 0;
   padding: 12px;
   text-align: center;
+  transition: 0.5s;
   width: 100%;
 }
 .menu-container .option-button a {
-  color: #FFF;
+  color: rgb(92, 92, 238);
   display: block;
   letter-spacing: 1px;
   text-decoration: none;
+  transition: 0.5s;
   white-space: nowrap;
   width: 100%;
 }
 .menu-container .option-button:hover {
-  background-color: rgba(92, 92, 238, 0.8);
+  background-color: rgb(92, 92, 238);
+}
+.menu-container .option-button:hover a {
+  color: #fff;
 }

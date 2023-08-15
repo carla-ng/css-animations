@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
 html {
   height: 100%;
 }
@@ -26,11 +27,36 @@ body {
   /********************
    *      MENU 04     *
    ********************/
+  /********************
+   *      MENU 05     *
+   ********************/
+  /********************
+   *      MENU 06     *
+   ********************/
+  /********************
+   *      MENU 07     *
+   ********************/
+  /********************
+   *      MENU 08     *
+   ********************/
+  /********************
+   *      MENU 09     *
+   ********************/
+  /********************
+   *      MENU 10     *
+   ********************/
 }
 body .intro-text {
+  background-color: #000;
+  color: #fff;
   font-size: 1.2rem;
-  padding: 32px 12px;
+  margin: 0 0 20px 0;
+  padding: 20px 12px;
   text-align: center;
+  width: 100%;
+}
+body .intro-text span {
+  text-decoration: underline;
 }
 body > div {
   margin: 30px 20px;
@@ -209,4 +235,327 @@ body .menu-04 ul li a:hover:before {
 body .menu-04 ul li a:hover:after {
   transform: translateX(-100%);
   width: 50%;
+}
+body .menu-05 {
+  background-color: #000;
+  padding: 20px 15px;
+}
+body .menu-05 ul:hover li a {
+  filter: blur(5px);
+  opacity: 0.2;
+}
+body .menu-05 ul li {
+  margin: 0px 20px;
+  transition: 0.5s;
+}
+body .menu-05 ul li a {
+  color: #fff;
+  display: block;
+  font-size: 22px;
+  padding: 5px;
+  position: relative;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+body .menu-05 ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #7124ee;
+  height: 100%;
+  transform: scale(0);
+  transition: 0.3s;
+  width: 100%;
+  z-index: -1;
+}
+body .menu-05 ul li a:hover {
+  filter: blur(0);
+  opacity: 1;
+  transform: scale(1.5);
+}
+body .menu-05 ul li a:hover:before {
+  transform: scale(1);
+}
+body .menu-06 {
+  background-color: #333;
+  font-family: "Raleway", Arial, sans-serif;
+}
+body .menu-06 ul {
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+body .menu-06 ul li {
+  position: relative;
+  margin: 5px;
+}
+body .menu-06 ul li a {
+  display: block;
+  font-weight: 300;
+  height: 40px;
+  letter-spacing: 2px;
+  overflow: hidden;
+  padding: 5px 10px;
+  position: relative;
+}
+body .menu-06 ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #16a085;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.5s;
+  width: 100%;
+}
+body .menu-06 ul li a:hover:before {
+  transform: scaleX(1);
+  transition-delay: 0.5s;
+}
+body .menu-06 ul li a:hover span {
+  transform: translateY(-100%);
+  transition-delay: 0s;
+}
+body .menu-06 ul li a span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  height: 100%;
+  position: relative;
+  text-transform: capitalize;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  width: 100%;
+}
+body .menu-07 {
+  font-family: "Raleway", Arial, sans-serif;
+}
+body .menu-07 ul li a {
+  color: #222;
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 15px 30px;
+  position: relative;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+body .menu-07 ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid #000;
+  border-top: 2px solid #000;
+  height: 100%;
+  opacity: 0;
+  transform: scaleY(2);
+  transition: 0.5s;
+  width: 100%;
+}
+body .menu-07 ul li a:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  background-color: #222;
+  height: 100%;
+  transform: scale(0);
+  transition: 0.5s;
+  width: 100%;
+  z-index: -1;
+}
+body .menu-07 ul li a:hover {
+  color: #fff;
+}
+body .menu-07 ul li a:hover:before {
+  opacity: 1;
+  transform: scaleY(1.2);
+}
+body .menu-07 ul li a:hover:after {
+  transform: scale(1);
+}
+body .menu-08 {
+  background-color: #333;
+  padding: 20px 12px;
+}
+body .menu-08 ul li {
+  padding: 10px 40px;
+}
+body .menu-08 ul li a {
+  color: #fff;
+  font-size: 24px;
+  padding: 5px;
+  position: relative;
+  text-transform: uppercase;
+}
+body .menu-08 ul li a:hover {
+  color: rgb(38, 134, 245);
+}
+body .menu-08 ul li a:hover span:first-child:before {
+  left: -10px;
+  top: -10px;
+  opacity: 1;
+}
+body .menu-08 ul li a:hover span:first-child:after {
+  right: -10px;
+  top: -10px;
+  opacity: 1;
+}
+body .menu-08 ul li a:hover span:last-child:before {
+  bottom: -10px;
+  left: -10px;
+  opacity: 1;
+}
+body .menu-08 ul li a:hover span:last-child:after {
+  bottom: -10px;
+  right: -10px;
+  opacity: 1;
+}
+body .menu-08 ul li a span:first-child:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  border-left: 2px solid rgb(38, 134, 245);
+  border-top: 2px solid rgb(38, 134, 245);
+  height: 8px;
+  opacity: 0;
+  transition: 0.2s;
+  width: 8px;
+}
+body .menu-08 ul li a span:first-child:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border-right: 2px solid rgb(38, 134, 245);
+  border-top: 2px solid rgb(38, 134, 245);
+  height: 8px;
+  opacity: 0;
+  transition: 0.2s;
+  width: 8px;
+}
+body .menu-08 ul li a span:last-child:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  border-bottom: 2px solid rgb(38, 134, 245);
+  border-left: 2px solid rgb(38, 134, 245);
+  height: 8px;
+  opacity: 0;
+  transition: 0.2s;
+  width: 8px;
+}
+body .menu-08 ul li a span:last-child:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: transparent;
+  border-bottom: 2px solid rgb(38, 134, 245);
+  border-right: 2px solid rgb(38, 134, 245);
+  height: 8px;
+  opacity: 0;
+  transition: 0.2s;
+  width: 8px;
+}
+body .menu-09 {
+  background-color: #262626;
+  font-family: "Raleway", Arial, sans-serif;
+  padding: 40px 12px;
+}
+body .menu-09 ul li a {
+  color: #ffeb3b;
+  display: block;
+  margin: 0 15px;
+  padding: 15px 30px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+body .menu-09 ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-left: 2px solid #ffeb3b;
+  border-top: 2px solid #ffeb3b;
+  box-sizing: border-box;
+  height: 100%;
+  transform-origin: left;
+  transition: 0.5s;
+  width: 100%;
+}
+body .menu-09 ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid #ffeb3b;
+  border-right: 2px solid #ffeb3b;
+  box-sizing: border-box;
+  height: 100%;
+  transform-origin: right;
+  transition: 0.5s;
+  width: 100%;
+}
+body .menu-09 ul li a:hover:before {
+  height: 15px;
+  transform: rotate(360deg);
+  width: 15px;
+}
+body .menu-09 ul li a:hover:after {
+  height: 15px;
+  transform: rotate(360deg);
+  width: 15px;
+}
+body .menu-10 {
+  background-color: rgb(27, 27, 27);
+  font-family: "Raleway", Arial, sans-serif;
+  padding: 25px;
+}
+body .menu-10 ul {
+  flex-direction: column;
+}
+body .menu-10 ul li a {
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  display: block;
+  font-size: 80px;
+  font-weight: 900;
+  position: relative;
+}
+body .menu-10 ul li a:before, body .menu-10 ul li a:after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+body .menu-10 ul li a:hover {
+  -webkit-text-stroke: 1px #000;
+  color: #fff;
+  transition: 0.5s;
+}
+body .menu-10 ul li a:hover:before {
+  -webkit-text-stroke: 1px #000;
+  color: rgb(211, 149, 230);
+  transform: translate(10px, -10px);
+  z-index: 1;
+}
+body .menu-10 ul li a:hover:after {
+  -webkit-text-stroke: 1px #000;
+  color: rgb(243, 125, 184);
+  transform: translate(20px, -20px);
+  z-index: 2;
 }
