@@ -26,6 +26,7 @@ Examples of animations created with CSS.
 ## :toolbox: Features
 * Button hover animations
 * Image hover animations
+* Menus hover animations
 
 <br>
 
