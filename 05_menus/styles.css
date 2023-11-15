@@ -12,9 +12,6 @@ body {
   font-family: sans-serif;
   height: 100vh;
   min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   /********************
    *      MENU 01     *
    ********************/
@@ -51,26 +48,37 @@ body .intro-text {
   color: #fff;
   font-size: 1.2rem;
   margin: 0 0 20px 0;
+  max-width: 100%;
   padding: 20px 12px;
   text-align: center;
-  width: 100%;
 }
 body .intro-text span {
   text-decoration: underline;
 }
-body > div {
-  margin: 30px 20px;
+body .menus-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-body > div ul {
+body .menus-container > div {
+  margin: 50px 20px;
+}
+body .menus-container > div ul {
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
 }
-body > div ul li {
+@media (max-width: 767px) {
+  body .menus-container > div ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+body .menus-container > div ul li {
   list-style: none;
 }
-body > div ul li a {
+body .menus-container > div ul li a {
   text-decoration: none;
 }
 body .menu-01 ul li a {
@@ -106,6 +114,11 @@ body .menu-01 ul li a:after {
 }
 body .menu-01 ul li a:hover:before, body .menu-01 ul li a:hover:after {
   transform: scaleX(1);
+}
+@media (max-width: 767px) {
+  body .menu-02 ul li {
+    margin: 15px 0;
+  }
 }
 body .menu-02 ul li a {
   color: #272727;
@@ -238,10 +251,10 @@ body .menu-04 ul li a:hover:after {
 }
 body .menu-05 {
   background-color: #000;
-  padding: 20px 15px;
+  padding: 20px;
 }
 body .menu-05 ul:hover li a {
-  filter: blur(5px);
+  filter: blur(3px);
   opacity: 0.2;
 }
 body .menu-05 ul li {
@@ -335,6 +348,11 @@ body .menu-06 ul li a span {
 body .menu-07 {
   font-family: "Raleway", Arial, sans-serif;
 }
+@media (max-width: 767px) {
+  body .menu-07 ul li {
+    margin: 25px 0;
+  }
+}
 body .menu-07 ul li a {
   color: #222;
   display: block;
@@ -386,6 +404,11 @@ body .menu-08 {
 }
 body .menu-08 ul li {
   padding: 10px 40px;
+}
+@media (max-width: 767px) {
+  body .menu-08 ul li {
+    margin: 15px 0;
+  }
 }
 body .menu-08 ul li a {
   color: #fff;
@@ -474,6 +497,12 @@ body .menu-09 {
   font-family: "Raleway", Arial, sans-serif;
   padding: 40px 12px;
 }
+@media (max-width: 767px) {
+  body .menu-09 ul li {
+    margin: 15px 0;
+    width: 100%;
+  }
+}
 body .menu-09 ul li a {
   color: #ffeb3b;
   display: block;
@@ -482,6 +511,11 @@ body .menu-09 ul li a {
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  body .menu-09 ul li a {
+    text-align: center;
+  }
 }
 body .menu-09 ul li a:before {
   content: "";
@@ -527,6 +561,11 @@ body .menu-10 {
 body .menu-10 ul {
   flex-direction: column;
 }
+@media (max-width: 767px) {
+  body .menu-10 ul li {
+    margin: 15px 0;
+  }
+}
 body .menu-10 ul li a {
   -webkit-text-stroke: 1px #fff;
   color: transparent;
@@ -534,6 +573,11 @@ body .menu-10 ul li a {
   font-size: 80px;
   font-weight: 900;
   position: relative;
+}
+@media (max-width: 767px) {
+  body .menu-10 ul li a {
+    font-size: 50px;
+  }
 }
 body .menu-10 ul li a:before, body .menu-10 ul li a:after {
   content: attr(data-text);

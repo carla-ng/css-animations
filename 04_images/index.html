@@ -7,7 +7,7 @@
     <title>Images Effects</title>
 
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=Lato:wght@400;700&family=Raleway:wght@100,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:wght@100&family=Lato:wght@400;700&family=Raleway:wght@100,400&display=swap" rel="stylesheet">
 
     <!-- OUR STYLESHEET -->
     <link rel="stylesheet" href="styles.css" type="text/css" media="all">
@@ -76,7 +76,7 @@
             <div class="caption">
                 <h2>Pokémon TCG</h2>
                 <p>Collectible card game developed by Creatures Inc. based on the Pokémon franchise.</p>
-                <a href="#">Read more</a>
+                <a class="button" href="#">Read more</a>
             </div>
         </div>
 
@@ -85,38 +85,52 @@
             <div class="caption">
                 <h2>Pokémon TCG</h2>
                 <p>Collectible card game developed by Creatures Inc. based on the Pokémon franchise.</p>
-                <a href="#">Read more</a>
+                <a class="button" href="#">Read more</a>
             </div>
         </div>
 
-        <div class="img-effect-9 img-base-3">
-            <img src="imgs/pokemon_tcg.jpg" alt="Pokemon Trading Card Game">
+
+        <!-- BASE 4 -->
+
+        <div class="img-effect-9 img-base-4">
+            <img src="imgs/pokemon_gb.jpg" alt="Pokemon Game Boy">
             <div class="caption">
-                <h2>Pokémon TCG</h2>
-                <p>Collectible card game developed by Creatures Inc. based on the Pokémon franchise.</p>
-                <a href="#">Read more</a>
+                <h2>Pokémon Games</h2>
+                <p>Pokémon is a series of video games developed by Game Freak and published by Nintendo and The Pokémon Company under the Pokémon media franchise.</p>
+                <a class="button" href="#">Read more</a>
             </div>
         </div>
 
-        <div class="img-effect-10 img-base-3">
-            <img src="imgs/pokemon_tcg.jpg" alt="Pokemon Trading Card Game">
+        <div class="img-effect-10 img-base-4">
+            <img src="imgs/pokemon_gb.jpg" alt="Pokemon Game Boy">
             <div class="caption">
-                <h2>Pokémon TCG</h2>
-                <p>Collectible card game developed by Creatures Inc. based on the Pokémon franchise.</p>
-                <a href="#">Read more</a>
+                <h2>Pokémon Games</h2>
+                <p>Pokémon is a series of video games developed by Game Freak and published by Nintendo and The Pokémon Company under the Pokémon media franchise.</p>
+                <a class="button" href="#">Read more</a>
             </div>
         </div>
 
-        <div class="img-effect-11 img-base-3">
-            <img src="imgs/pokemon_tcg.jpg" alt="Pokemon Trading Card Game">
+        <div class="img-effect-11 img-base-4">
+            <img src="imgs/pokemon_gb.jpg" alt="Pokemon Game Boy">
             <div class="caption">
-                <h2>Pokémon TCG</h2>
-                <p>Collectible card game developed by Creatures Inc. based on the Pokémon franchise.</p>
-                <a href="#">Read more</a>
+                <h2>Pokémon Games</h2>
+                <p>Pokémon is a series of video games developed by Game Freak and published by Nintendo and The Pokémon Company under the Pokémon media franchise.</p>
+                <a class="button" href="#">Read more</a>
             </div>
         </div>
 
     </div>
+
+
+    <script>
+        const buttons = document.querySelectorAll('.button')
+
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.preventDefault()
+            })
+        })
+    </script>
 
 </body>
 

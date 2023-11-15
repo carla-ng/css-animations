@@ -33,5 +33,6 @@ Examples of animations created with CSS.
 ## :clap: Acknowledgments
 * Project idea by Ahmed Sadek - [Creative Advanced CSS Animations](https://www.udemy.com/course/css-animation-transitions-and-transforms-creativity-course/)
 * Images:
-    * Laurie Byrne on [Unsplash](https://unsplash.com/photos/hNpPY6ynYKo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
-    * Erik Mclean on [Unsplash](https://unsplash.com/photos/fDAv7lWawtk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * Laurie Byrne on [Unsplash](https://unsplash.com/photos/yellow-and-orange-flower-beside-yellow-and-green-box-hNpPY6ynYKo?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash)  
+    * Giorgio Trovato on [Unsplash](https://unsplash.com/photos/a-pile-of-pokemon-trading-cards-sitting-on-top-of-each-other-scWhKf1ltv4?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash)
+    * Denise Jans on [Unsplash](https://unsplash.com/photos/blue-and-black-digital-device-l1SEP7nf2XU?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash)

@@ -5,12 +5,12 @@ body .buttons-container {
   margin: 50px auto;
   max-width: 1400px;
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   justify-content: center;
 }
 body .buttons-container .button {
   margin: 40px;
+  text-align: center;
 }
 body .buttons-container .button a {
   display: block;

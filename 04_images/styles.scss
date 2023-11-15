@@ -13,9 +13,9 @@ body {
         color: #fff;
         font-size: 1.2rem;
         margin: 0 0 20px 0;
+        max-width: 100%;
         padding: 20px 12px;
         text-align: center;
-        width: 100%;
 
         span { text-decoration: underline; }
     }
@@ -25,6 +25,16 @@ body {
         flex-wrap: wrap;
         justify-content: center;
 
+        margin: 0 auto;
+        max-width: 1024px;
+
+        .caption {
+            a {
+                font-size: 0.8rem;
+                @media (min-width: 768px) { font-size: 1rem; }
+            }
+        }
+
 
         /*********************
          *       BASES       *
@@ -33,10 +43,12 @@ body {
         .img-base-1 {
             font-family: 'Lato', sans-serif;
             height: auto;
-            margin: 30px;
+            margin: 16px;
             overflow: hidden;
             position: relative;
-            width: 500px;
+            width: 300px;
+
+            @media (min-width: 768px) { width: 400px; }
     
             img {
                 height: auto;
@@ -62,14 +74,24 @@ body {
     
                 h1 {
                     margin: 0;
+                    text-align: center;
                     text-transform: uppercase;
+
+                    @media (max-width: 767px) {
+                        font-size: 1.8rem;
+                    }
                 }
     
                 p {
-                    font-size: 18px;
-                    line-height: 1.7;
+                    font-size: 1rem;
+                    line-height: 1.5;
                     margin-inline: 16px;
                     text-align: center;
+
+                    @media (min-width: 768px) {
+                        font-size: 1.2rem;
+                        line-height: 1.7;
+                    }
                 }
             }
         }
@@ -77,11 +99,13 @@ body {
         .img-base-2 {
             border-radius: 10px;
             font-family: 'Raleway', sans-serif;
-            height: auto;
-            margin: 30px;
+            height: 450px;
+            margin: 16px;
             overflow: hidden;
             position: relative;
-            width: 500px;
+            width: 300px;
+
+            @media (min-width: 768px) { width: 400px; }
 
             &:before {
                 content: '';
@@ -99,8 +123,8 @@ body {
             }
     
             img {
-                height: auto;
-                width: 100%;
+                height: 100%;
+                width: auto;
             }
     
             .caption {
@@ -131,7 +155,7 @@ body {
                 }
 
                 h5 {
-                    background-color: #fc8b5b;
+                    background-color: #df2323;
                     letter-spacing: 1.5px;
                     line-height: 1.2;
                     margin-inline: 16px;
@@ -142,12 +166,14 @@ body {
             }
         }
 
-        .img-base-3 {
+        .img-base-3, .img-base-4 {
             font-family: 'Lato', sans-serif;
-            margin: 30px;
+            margin: 16px;
             overflow: hidden;
             position: relative;
-            width: 500px;
+            width: 300px;
+
+            @media (min-width: 768px) { width: 400px; }
 
             &:before {
                 content: '';
@@ -156,14 +182,9 @@ body {
                 left: 0;
 
                 background-color: #000;
-                height: 220%;
+                height: 300%;
                 opacity: 0.6;
-                width: 120%;
-            }
-    
-            img {
-                height: auto;
-                width: 100%;
+                width: 300%;
             }
     
             .caption {
@@ -186,8 +207,8 @@ body {
                 }
 
                 h2 {
-                    background-color: #fc8b5b;
-                    font-size: 17px;
+                    background-color: #df2323;
+                    font-size: 1.1rem;
                     margin-top: 15px;
                     padding: 20px;
                     width: 100%;
@@ -195,10 +216,12 @@ body {
 
                 p {
                     align-self: center;
-                    font-size: 16px;
+                    font-size: 0.9rem;
                     margin: 0;
                     margin-bottom: 25px;
                     width: 80%;
+
+                    @media (min-width: 768px) { font-size: 1rem; }
                 }
 
                 a {
@@ -210,6 +233,20 @@ body {
                     text-decoration: none;
                     width: 100px;
                 }
+            }
+        }
+
+        .img-base-3 {
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+
+        .img-base-4 {
+            img {
+                height: 100%;
+                width: 100%;
             }
         }
 
@@ -267,6 +304,17 @@ body {
                 opacity: 1;
                 top: auto;
                 transform: translateY(100%);
+
+                display: flex;
+                align-items: center;
+
+                h1 {
+                    @media (max-width: 767px) { font-size: 1.2rem; }
+                }
+
+                p {
+                    @media (max-width: 767px) { font-size: 0.7rem; }
+                }
             }
 
             &:hover {
@@ -292,7 +340,7 @@ body {
         }
 
         .img-effect-6 {
-            border: 5px solid #05bfd8;
+            border: 5px solid #df2323;
 
             &:before { content: none; }
 
@@ -389,20 +437,20 @@ body {
             height: auto;
 
             img {
-                transition: all 0.5s;
-                transition-delay: 0.5s;
+                transition: all 0.3s;
+                transition-delay: 0.3s;
             }
 
             &:before {
                 background-color: #05bfd8;
                 transform: scale(0) rotate(-180deg);
-                transition: all 0.5s;
+                transition: all 0.3s;
             }
 
             .caption {
                 h2, p, a {
                     opacity: 0;
-                    transition: all 0.5s;
+                    transition: all 0.3s;
                 }
             }
 
@@ -414,13 +462,13 @@ body {
 
                 &:before {
                     transform: scale(1) rotate(0deg);
-                    transition-delay: 0.5s;
+                    transition-delay: 0.3s;
                 }
 
                 .caption {
                     h2, p, a {
                         opacity: 1;
-                        transition-delay: 1s;
+                        transition-delay: 0.8s;
                     }
                 }
             }
@@ -443,7 +491,7 @@ body {
                 }
 
                 a {
-                    transform: translateY(150px);
+                    transform: translateY(300px);
                     transition: all 0.3s;
                 }
             }
@@ -481,7 +529,7 @@ body {
 
             .caption {
                 h2, p, a {
-                    transform: translateY(-300px);
+                    transform: translateY(-600px);
                     transition: all 0.2s;
                 }
             }
